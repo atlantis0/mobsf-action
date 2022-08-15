@@ -1,6 +1,6 @@
 FROM opensecurity/mobile-security-framework-mobsf:v3.5.0
 
-LABEL version="1.7.2"
+LABEL version="1.7.4"
 LABEL repository="https://github.com/fundacaocerti/mobsf-action"
 LABEL homepage="https://github.com/fundacaocerti/mobsf-action"
 LABEL maintainer="Ian Koerich Maciel <inm@certi.org.br>"
@@ -10,7 +10,7 @@ LABEL com.github.actions.description="Wraps the MobSF docker to enable common co
 LABEL com.github.actions.icon="package"
 LABEL com.github.actions.color="gray-dark"
 
-USER root
+#USER root
 RUN apt-get update -y && \
   apt-get install -y curl jq
 
