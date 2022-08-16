@@ -1,6 +1,6 @@
-FROM opensecurity/mobile-security-framework-mobsf:v3.5.0
+FROM opensecurity/mobile-security-framework-mobsf:v3.4.3
 
-LABEL version="1.7.5"
+LABEL version="1.7.6"
 LABEL repository="https://github.com/fundacaocerti/mobsf-action"
 LABEL homepage="https://github.com/fundacaocerti/mobsf-action"
 LABEL maintainer="Ian Koerich Maciel <inm@certi.org.br>"
@@ -14,7 +14,7 @@ USER root
 RUN apt-get update -y && \
   apt-get install -y curl jq
 
-USER mobsf
+#USER mobsf
 COPY LICENSE README.md /
 COPY "entrypoint.sh" "/home/mobsf/Mobile-Security-Framework-MobSF/entrypoint_github.sh"
 
